@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import * as React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { PracticeItem, Assessment, Accuracy } from '../types';
 import { usePronunciationApi } from '../hooks/usePronunciationApi';
@@ -27,11 +27,11 @@ const AccuracyPill: React.FC<{ score: number }> = ({ score }) => {
 
 
 const PronunciationAssessor: React.FC<PronunciationAssessorProps> = ({ item, onNext }) => {
-  const [isRecording, setIsRecording] = useState(false);
+  const [isRecording, setIsRecording] = React.useState(false);
   const { assessment, isLoading, error, assessPronunciation, resetAssessment } = usePronunciationApi();
-  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const mediaRecorderRef = React.useRef<MediaRecorder | null>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     resetAssessment();
   }, [item, resetAssessment]);
 

@@ -1,10 +1,10 @@
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import PronunciationAssessor from '../components/PronunciationAssessor';
 import { VOCABULARY_PRACTICE_ITEMS } from '../constants';
 
 const VocabularyPracticePage: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = React.useState(0);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % VOCABULARY_PRACTICE_ITEMS.length);

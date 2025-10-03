@@ -1,5 +1,5 @@
 
-import React from 'react';
+import * as React from 'react';
 import { ProfileIcon } from './icons/Icon';
 
 const Header: React.FC = () => {

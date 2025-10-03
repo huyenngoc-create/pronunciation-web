@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import DashboardPage from './pages/DashboardPage';
@@ -10,7 +10,7 @@ import ProfilePage from './pages/ProfilePage';
 import { Page } from './types';
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<Page>('dashboard');
+  const [currentPage, setCurrentPage] = React.useState<Page>('dashboard');
 
   const renderPage = () => {
     switch (currentPage) {

@@ -1,10 +1,10 @@
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import PronunciationAssessor from '../components/PronunciationAssessor';
 import { PINYIN_PRACTICE_ITEMS } from '../constants';
 
 const PinyinPracticePage: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = React.useState(0);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % PINYIN_PRACTICE_ITEMS.length);

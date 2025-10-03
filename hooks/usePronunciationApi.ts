@@ -1,5 +1,5 @@
 
-import { useState, useCallback } from 'react';
+import * as React from 'react';
 import { Assessment, Accuracy, WordResult, ToneDataPoint } from '../types';
 
 const generateRandomAssessment = (text: string): Assessment => {
@@ -39,11 +39,11 @@ const generateRandomAssessment = (text: string): Assessment => {
 };
 
 export const usePronunciationApi = () => {
-  const [assessment, setAssessment] = useState<Assessment | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [assessment, setAssessment] = React.useState<Assessment | null>(null);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
 
-  const assessPronunciation = useCallback((text: string) => {
+  const assessPronunciation = React.useCallback((text: string) => {
     setIsLoading(true);
     setError(null);
     setAssessment(null);
@@ -61,7 +61,7 @@ export const usePronunciationApi = () => {
     }, 1500 + Math.random() * 1000);
   }, []);
   
-  const resetAssessment = useCallback(() => {
+  const resetAssessment = React.useCallback(() => {
     setAssessment(null);
     setError(null);
     setIsLoading(false);

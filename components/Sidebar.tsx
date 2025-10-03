@@ -1,5 +1,5 @@
 
-import React from 'react';
+import * as React from 'react';
 import { Page } from '../types';
 import { DashboardIcon, PinyinIcon, VocabIcon, SentenceIcon, ProfileIcon, LogoutIcon } from './icons/Icon';
 
