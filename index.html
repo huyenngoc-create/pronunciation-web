@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Hanyu Pronunciation Coach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Be Vietnam Pro', 'sans-serif'],
+            },
+            colors: {
+              primary: '#1d4ed8',
+              'primary-hover': '#2563eb',
+              'primary-light': '#dbeafe',
+              success: '#16a34a',
+              warning: '#f97316',
+              danger: '#dc2626',
+              'light-bg': '#f1f5f9',
+              'dark-text': '#0f172a',
+              'light-text': '#64748b',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-light-bg text-dark-text">
+    <div id="root"></div>
+  </body>
+</html>

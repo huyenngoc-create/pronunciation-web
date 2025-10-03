@@ -1,0 +1,7 @@
+{
+  "name": "Copy of AI Hanyu Pronunciation Coach",
+  "description": "An AI-powered web application designed to help Vietnamese speakers learn and perfect their Mandarin Chinese (Hanyu) pronunciation through interactive exercises, detailed feedback, and personalized progress tracking.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
